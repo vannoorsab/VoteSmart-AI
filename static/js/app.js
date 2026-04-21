@@ -36,6 +36,17 @@ function initNav() {
     });
   });
 
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      const sun = themeToggle.querySelector(".sun-icon");
+      const moon = themeToggle.querySelector(".moon-icon");
+      sun.classList.toggle("hidden");
+      moon.classList.toggle("hidden");
+    });
+  }
+
   document.addEventListener("click", e => {
     if (!e.target.closest(".header-actions")) {
       document.getElementById("langPicker")?.classList.add("hidden");

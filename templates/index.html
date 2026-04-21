@@ -30,6 +30,10 @@
         <button class="nav-btn" data-view="chat">AI Chat</button>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <span class="sun-icon" aria-hidden="true">☀️</span>
+          <span class="moon-icon hidden" aria-hidden="true">🌙</span>
+        </button>
         <button class="translate-btn" id="translateToggle" aria-label="Toggle language translation"
           title="Translate page">
           <span aria-hidden="true">🌐</span> Translate
@@ -61,8 +65,8 @@
     <div class="hero-content">
       <div class="hero-text-col">
         <div class="hero-badge" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.4);">🌍 8 Countries · 40+ Election Facts</div>
-        <h1 id="hero-title" style="color: var(--ink);">Understand How<br /><em>Democracy Works</em></h1>
-        <p class="hero-sub" style="margin: 0 0 36px 0; color: var(--ink-muted);">Interactive timelines, step-by-step guides, and AI-powered Q&amp;A — explore elections from India to the EU.</p>
+        <h1 id="hero-title" style="color: var(--ink);">Empowering Global<br /><em>Citizens with AI</em></h1>
+        <p class="hero-sub" style="margin: 0 0 36px 0; color: var(--ink-muted);">Navigate the complexities of global democracy with real-time insights, interactive voting roadmaps, and AI-driven guidance.</p>
         <div class="hero-ctas" style="justify-content: flex-start;">
           <button class="btn-primary" onclick="setView('explore')" aria-label="Start exploring countries">Start Exploring</button>
           <button class="btn-ghost" onclick="setView('chat')" aria-label="Ask the AI assistant">Ask AI Assistant</button>
@@ -91,10 +95,17 @@
         {% for key, country in countries.items() %}
         <button class="country-card" role="listitem" data-country="{{ key }}"
           aria-label="Explore {{ country.name }} elections" style="--accent: {{ country.color }}">
-          <span class="cc-flag" aria-hidden="true">{{ country.flag }}</span>
-          <span class="cc-name">{{ country.name }}</span>
-          <span class="cc-system">{{ country.system }}</span>
-          <span class="cc-arrow" aria-hidden="true">→</span>
+          <div class="cc-header">
+            <span class="cc-flag" aria-hidden="true">{{ country.flag }}</span>
+            <div class="cc-info">
+              <span class="cc-name">{{ country.name }}</span>
+              <span class="cc-system-label">{{ country.system }}</span>
+            </div>
+          </div>
+          <div class="cc-footer">
+            <span class="cc-view-text">View Process</span>
+            <span class="cc-arrow" aria-hidden="true">→</span>
+          </div>
         </button>
         {% endfor %}
       </div>
