@@ -463,5 +463,162 @@
       "Two-round system ensures majority winner",
       "One of the world's most advanced electronic voting systems"
     ]
+  },
+  "canada": {
+    "name": "Canada",
+    "flag": "🇨🇦",
+    "system": "Federal Parliamentary Democracy",
+    "body": "Elections Canada",
+    "frequency": "Every 4 years (Fixed-date) or earlier",
+    "voters": "27 million+",
+    "color": "#FF0000",
+    "description": "Canada is a parliamentary democracy. Citizens elect Members of Parliament (MPs) to the House of Commons using First Past the Post. The leader of the party with the most MPs usually becomes Prime Minister.",
+    "timeline": [
+      {
+        "phase": "Writ Dropped",
+        "days": "-36 to -50",
+        "description": "Governor General dissolves Parliament on advice of the PM. Election period begins."
+      },
+      {
+        "phase": "Nomination Deadline",
+        "days": "-21",
+        "description": "Candidates must file their nomination papers."
+      },
+      {
+        "phase": "Advance Polling",
+        "days": "-10 to -7",
+        "description": "Advance polling stations are open for voters who wish to vote early."
+      },
+      {
+        "phase": "Election Day",
+        "days": "0",
+        "description": "Polling day. Votes are cast on paper ballots and counted."
+      }
+    ],
+    "steps": [
+      {
+        "icon": "📝",
+        "title": "Register",
+        "detail": "Be 18+ and a Canadian citizen. Register online or at the polls."
+      },
+      {
+        "icon": "🪪",
+        "title": "Bring ID",
+        "detail": "Bring a driver's license, or two other pieces of ID, or have someone vouch for you."
+      },
+      {
+        "icon": "🗳️",
+        "title": "Vote",
+        "detail": "Mark your paper ballot with an X for your preferred candidate."
+      }
+    ],
+    "facts": [
+      "Voter Information Cards are mailed to all registered voters",
+      "Canada uses hand-counted paper ballots",
+      "Minority governments are common in Canada"
+    ]
+  },
+  "australia": {
+    "name": "Australia",
+    "flag": "🇦🇺",
+    "system": "Federal Parliamentary Democracy",
+    "body": "Australian Electoral Commission (AEC)",
+    "frequency": "Every 3 years (House of Representatives)",
+    "voters": "17 million+",
+    "color": "#00843D",
+    "description": "Australia uses a preferential voting system (ranked-choice) for its House of Representatives and a single transferable vote for the Senate. Voting is compulsory for all adult citizens.",
+    "timeline": [
+      {
+        "phase": "Issue of Writs",
+        "days": "-33",
+        "description": "Official document commanding an election to be held is issued."
+      },
+      {
+        "phase": "Close of Rolls",
+        "days": "-26",
+        "description": "Voter registration closes."
+      },
+      {
+        "phase": "Early Voting",
+        "days": "-14",
+        "description": "Pre-poll voting centers open."
+      },
+      {
+        "phase": "Election Day",
+        "days": "0",
+        "description": "Always a Saturday. Polling places feature 'democracy sausages' at fundraisers."
+      }
+    ],
+    "steps": [
+      {
+        "icon": "📝",
+        "title": "Enrol",
+        "detail": "Enrolment is compulsory for citizens 18 and older."
+      },
+      {
+        "icon": "1️⃣",
+        "title": "Rank Candidates",
+        "detail": "Number every box on the green House of Representatives ballot in order of preference."
+      },
+      {
+        "icon": "🌭",
+        "title": "Enjoy a Sausage",
+        "detail": "Buy a 'democracy sausage' from a community fundraiser outside the polling place."
+      }
+    ],
+    "facts": [
+      "Voting is compulsory; non-voters face a fine",
+      "Australia invented the secret ballot (the 'Australian ballot')",
+      "'Democracy sausages' are a cultural staple on Election Day"
+    ]
+  },
+  "japan": {
+    "name": "Japan",
+    "flag": "🇯🇵",
+    "system": "Parliamentary Constitutional Monarchy",
+    "body": "Central Election Management Council",
+    "frequency": "Every 4 years (House of Representatives) or earlier",
+    "voters": "105 million+",
+    "color": "#BC002D",
+    "description": "The National Diet consists of the House of Representatives and the House of Councillors. A mixed electoral system is used, combining First Past the Post and proportional representation.",
+    "timeline": [
+      {
+        "phase": "Dissolution",
+        "days": "-40",
+        "description": "House of Representatives dissolved by the Emperor on advice of the Cabinet."
+      },
+      {
+        "phase": "Campaign Period",
+        "days": "-12 to -1",
+        "description": "Strict, short campaign period with limits on spending and advertising."
+      },
+      {
+        "phase": "Election Day",
+        "days": "0",
+        "description": "Always a Sunday. Voters write the name of the candidate/party on the ballot."
+      }
+    ],
+    "steps": [
+      {
+        "icon": "✉️",
+        "title": "Receive Ticket",
+        "detail": "An admission ticket is mailed to your registered address."
+      },
+      {
+        "icon": "✍️",
+        "title": "Write the Name",
+        "detail": "Voters physically write the name of the candidate and party on the ballot papers."
+      },
+      {
+        "icon": "🗳️",
+        "title": "Cast Ballot",
+        "detail": "Drop the ballot in the designated box."
+      }
+    ],
+    "facts": [
+      "Voters use pencils provided at the booth to write candidate names",
+      "Campaigning rules are very strict, prohibiting door-to-door canvassing",
+      "Sound trucks are a common, though noisy, feature of Japanese campaigns"
+    ]
   }
 }
