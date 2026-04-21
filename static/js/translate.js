@@ -11,12 +11,12 @@ async function selectLanguage(lang) {
 
   if (lang === "en") {
     window.showToast("Language reset to English.");
-    window.VoteSmart AIState.translateLang = null;
+    window.voteSmartState.translateLang = null;
     return;
   }
 
   window.showToast(`Translating to ${lang}...`);
-  window.VoteSmart AIState.translateLang = lang;
+  window.voteSmartState.translateLang = lang;
 
   const textNodes = [];
   const elements = document.querySelectorAll(

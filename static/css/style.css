@@ -63,7 +63,7 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
 /* ── HEADER ── */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: var(--ink);
+  background: var(--paper);
   border-bottom: 2px solid var(--gold);
   padding: 0 24px;
 }
@@ -76,7 +76,7 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
   display: flex; align-items: center; gap: 10px;
   font-family: var(--font-display);
   font-size: 1.5rem; font-weight: 700;
-  color: var(--paper);
+  color: var(--ink);
   flex-shrink: 0;
 }
 .logo em { color: var(--gold); font-style: normal; }
@@ -85,7 +85,7 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
 .main-nav { display: flex; gap: 4px; flex: 1; }
 .nav-btn {
   padding: 8px 18px; border-radius: 6px;
-  color: rgba(245,240,232,0.6);
+  color: var(--ink-muted);
   font-size: 0.92rem; font-weight: 500;
   transition: var(--transition);
   letter-spacing: 0.02em;
@@ -101,7 +101,7 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
   display: flex; align-items: center; gap: 6px;
   padding: 7px 14px; border-radius: 6px;
   border: 1px solid rgba(201,168,76,0.4);
-  color: rgba(245,240,232,0.8);
+  color: var(--ink-soft);
   font-size: 0.88rem; font-weight: 500;
   transition: var(--transition);
 }
@@ -111,14 +111,14 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
 }
 .lang-picker {
   position: absolute; right: 0; top: calc(100% + 8px);
-  background: var(--ink); border: 1px solid var(--gold);
+  background: var(--paper-light); border: 1px solid var(--gold);
   border-radius: var(--radius-sm);
   display: flex; flex-direction: column; min-width: 140px;
   overflow: hidden; box-shadow: var(--shadow-lg);
 }
 .lang-picker button {
   padding: 10px 16px; text-align: left;
-  color: rgba(245,240,232,0.8); font-size: 0.9rem;
+  color: var(--ink-soft); font-size: 0.9rem;
   transition: var(--transition);
 }
 .lang-picker button:hover {
@@ -578,15 +578,15 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
 
 /* ── FOOTER ── */
 .site-footer {
-  background: var(--ink); color: rgba(245,240,232,0.5);
+  background: var(--paper); color: var(--ink-muted);
   padding: 32px 24px; margin-top: 80px;
-  border-top: 2px solid rgba(201,168,76,0.2);
+  border-top: 2px solid rgba(139,92,246,0.2);
 }
 .footer-inner {
   max-width: 1200px; margin: 0 auto;
   display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
 }
-.footer-brand { font-size: 1.1rem; color: rgba(245,240,232,0.8); }
+.footer-brand { font-size: 1.1rem; color: var(--ink); }
 .footer-brand strong { font-family: var(--font-display); }
 .footer-tagline { font-size: 0.88rem; }
 .footer-links { display: flex; gap: 10px; align-items: center; font-size: 0.85rem; }

@@ -1,6 +1,6 @@
 "use strict";
 
-window.VoteSmart AIState = {
+window.voteSmartState = {
   currentView: "explore",
   currentCountry: null,
   chatHistory: [],
@@ -44,7 +44,7 @@ function initNav() {
 }
 
 function setView(view) {
-  window.VoteSmart AIState.currentView = view;
+  window.voteSmartState.currentView = view;
 
   document.querySelectorAll(".view").forEach(v => {
     v.classList.toggle("active", v.id === `view-${view}`);
@@ -79,7 +79,7 @@ async function openCountry(countryId) {
     if (!res.ok) throw new Error("Country not found");
 
     const data = await res.json();
-    window.VoteSmart AIState.currentCountry = countryId;
+    window.voteSmartState.currentCountry = countryId;
     renderCountryDetail(data);
 
     document.querySelector(".country-grid")?.classList.add("hidden");
@@ -109,7 +109,7 @@ function renderCountryDetail(data) {
 }
 
 function closeCountry() {
-  window.VoteSmart AIState.currentCountry = null;
+  window.voteSmartState.currentCountry = null;
   document.getElementById("countryDetail")?.classList.add("hidden");
   document.querySelector(".country-grid")?.classList.remove("hidden");
 }
@@ -117,9 +117,9 @@ function closeCountry() {
 async function loadAllCountries() {
   try {
     const res = await fetch("/api/elections");
-    window.VoteSmart AIState.allCountries = await res.json();
+    window.voteSmartState.allCountries = await res.json();
   } catch (e) {
-    window.VoteSmart AIState.allCountries = {};
+    window.voteSmartState.allCountries = {};
   }
 }
 
@@ -204,7 +204,7 @@ async function startQuiz(countryId) {
     const country = await res.json();
     const questions = buildQuizQuestions(country);
 
-    window.VoteSmart AIState.quizState = {
+    window.voteSmartState.quizState = {
       country: countryId,
       questions,
       current: 0,
@@ -247,7 +247,7 @@ function buildQuizQuestions(countryData) {
 }
 
 function renderQuizQuestion() {
-  const { questions, current, score } = window.VoteSmart AIState.quizState;
+  const { questions, current, score } = window.voteSmartState.quizState;
   const qc = document.getElementById("quizContainer");
   if (!qc) return;
 
@@ -258,13 +258,13 @@ function renderQuizQuestion() {
       <div class="quiz-score" role="region" aria-label="Quiz results">
         <span class="quiz-score-num" aria-label="Score ${score} out of ${questions.length}">${score}/${questions.length}</span>
         <div class="quiz-score-label">${emoji}. You scored ${pct}%.</div>
-        <button class="quiz-restart-btn" onclick="startQuiz('${window.VoteSmart AIState.quizState.country}')" aria-label="Try again">Try Again</button>
+        <button class="quiz-restart-btn" onclick="startQuiz('${window.voteSmartState.quizState.country}')" aria-label="Try again">Try Again</button>
       </div>`;
     return;
   }
 
   const q = questions[current];
-  window.VoteSmart AIState.quizState.answered = false;
+  window.voteSmartState.quizState.answered = false;
 
   qc.innerHTML = `
     <div class="quiz-progress" aria-label="Question ${current + 1} of ${questions.length}">Question ${current + 1} of ${questions.length} · Score: ${score}</div>
@@ -281,14 +281,14 @@ function renderQuizQuestion() {
 }
 
 function answerQuiz(selectedIndex) {
-  if (window.VoteSmart AIState.quizState.answered) return;
-  window.VoteSmart AIState.quizState.answered = true;
+  if (window.voteSmartState.quizState.answered) return;
+  window.voteSmartState.quizState.answered = true;
 
-  const { questions, current } = window.VoteSmart AIState.quizState;
+  const { questions, current } = window.voteSmartState.quizState;
   const correct = questions[current].answer;
   const isCorrect = selectedIndex === correct;
 
-  if (isCorrect) window.VoteSmart AIState.quizState.score += 1;
+  if (isCorrect) window.voteSmartState.quizState.score += 1;
 
   document.querySelectorAll(".quiz-option").forEach((btn, i) => {
     btn.disabled = true;
@@ -308,14 +308,14 @@ function answerQuiz(selectedIndex) {
 }
 
 function nextQuizQuestion() {
-  window.VoteSmart AIState.quizState.current += 1;
+  window.voteSmartState.quizState.current += 1;
   renderQuizQuestion();
 }
 
 function openQuizForCurrent() {
-  if (window.VoteSmart AIState.currentCountry) {
+  if (window.voteSmartState.currentCountry) {
     setView("quiz");
-    startQuiz(window.VoteSmart AIState.currentCountry);
+    startQuiz(window.voteSmartState.currentCountry);
   }
 }
 

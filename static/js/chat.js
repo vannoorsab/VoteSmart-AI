@@ -27,7 +27,7 @@ async function sendChat() {
   const sendBtn = document.getElementById("chatSend");
   if (sendBtn) sendBtn.disabled = true;
 
-  window.VoteSmart AIState.chatHistory.push({ role: "user", content: msg });
+  window.voteSmartState.chatHistory.push({ role: "user", content: msg });
 
   try {
     const res = await fetch("/api/chat", {
@@ -35,14 +35,14 @@ async function sendChat() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         message: msg,
-        history: window.VoteSmart AIState.chatHistory.slice(-8)
+        history: window.voteSmartState.chatHistory.slice(-8)
       })
     });
 
     const data = await res.json();
     typingEl.remove();
     const reply = data.response || "I could not process that. Please try again.";
-    window.VoteSmart AIState.chatHistory.push({ role: "assistant", content: reply });
+    window.voteSmartState.chatHistory.push({ role: "assistant", content: reply });
     appendChatMsg("assistant", reply);
   } catch (e) {
     typingEl.remove();

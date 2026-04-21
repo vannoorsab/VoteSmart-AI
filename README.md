@@ -5,7 +5,7 @@ Making democracy understandable with interactive timelines, voting guides, and A
 ## Project Overview
 
 VoteSmart AI is a production-grade educational platform featuring:
-- 5 countries: India, USA, UK, EU, Brazil
+- 8 countries: India, USA, UK, EU, Brazil, Canada, Australia, Japan
 - Interactive election timelines
 - Step-by-step voting guides
 - Election system comparison view
@@ -28,7 +28,7 @@ VoteSmart AI is a production-grade educational platform featuring:
 ## Project Structure
 
 ```text
-VoteSmart AI-ai/
+VoteSmart-AI/
   app.py
   config.py
   requirements.txt
@@ -94,7 +94,7 @@ VoteSmart AI-ai/
 - Keyboard-friendly interaction patterns
 - Visible focus states
 - Skip link support
-- High contrast editorial theme
+- High contrast modern dark theme
 
 ## Testing
 
@@ -109,16 +109,10 @@ Current status:
 
 ## Deployment
 
-Deployed Cloud Run service URL:
-- https://VoteSmart AI-ai-253750832620.us-central1.run.app
-
-Health endpoint:
-- https://VoteSmart AI-ai-253750832620.us-central1.run.app/health
-
 Deploy command:
 
 ```bash
-gcloud run deploy VoteSmart AI-ai \
+gcloud run deploy votesmart-ai \
   --source . \
   --region us-central1 \
   --platform managed \
