@@ -5,16 +5,16 @@
    ════════════════════════════════════════ */
 
 :root {
-  --ink: #0d0f14;
-  --ink-soft: #1c1f28;
-  --ink-muted: #2e3240;
-  --paper: #f5f0e8;
-  --paper-light: #faf8f4;
-  --gold: #c9a84c;
-  --gold-light: #e8c96a;
-  --gold-pale: #f5ecd0;
-  --red: #c0392b;
-  --teal: #1a7a6e;
+  --ink: #f8fafc;
+  --ink-soft: #f1f5f9;
+  --ink-muted: #cbd5e1;
+  --paper: #0f172a;
+  --paper-light: #1e293b;
+  --gold: #8b5cf6;
+  --gold-light: #a78bfa;
+  --gold-pale: #2e1065;
+  --red: #f43f5e;
+  --teal: #10b981;
   --accent: var(--gold);
   --radius: 12px;
   --radius-sm: 6px;
