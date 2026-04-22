@@ -1,20 +1,19 @@
 # VoteSmart AI - Global Election Education Platform
 
-Making democracy understandable with interactive timelines, voting guides, and AI-powered Q&A.
+Simplifying democracy through interactive timelines, guided voting steps, and AI-driven conversations.
 
 ## Project Overview
 
 VoteSmart AI is a production-grade educational platform featuring:
-- 8 countries: India, USA, UK, EU, Brazil, Canada, Australia, Japan
-- Interactive election timelines
-- Step-by-step voting guides
-- Election system comparison view
-- Country quiz mode
-- AI chat powered by Google Gemini
-- Translation support powered by Google Cloud Translate
-- Accessibility-first frontend design
-- Cloud Run deployment with CI/CD
 
+- Interactive election timelines for better visualization  
+- Step-by-step voting guides for each country  
+- Side-by-side election system comparison  
+- Quiz mode for learning and engagement  
+- AI-powered chat using Google Gemini  
+- Multi-language support via Google Cloud Translate  
+- Accessibility-focused frontend design  
+- Deployed on Cloud Run with CI/CD integration
 ## Tech Stack
 
 - Backend: Flask 3.1.0 (Python 3.11+)
@@ -90,11 +89,11 @@ VoteSmart-AI/
 
 ## Accessibility
 
-- ARIA landmarks and semantic structure
-- Keyboard-friendly interaction patterns
-- Visible focus states
-- Skip link support
-- High contrast modern dark theme
+- Proper use of ARIA landmarks and semantic HTML
+- Fully keyboard-accessible interactions
+- Clear and visible focus indicators
+- Skip navigation links for better usability
+- High-contrast modern dark theme
 
 ## Testing
 
@@ -105,7 +104,7 @@ pytest tests/ -v
 ```
 
 Current status:
-- 299 tests passing
+- 250+ tests passing (routes, services, security, accessibility, and data validation)
 
 ## Deployment
 
